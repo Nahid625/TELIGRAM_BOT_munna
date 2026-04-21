@@ -30,7 +30,7 @@ def get_history(user_id):
 # /start command
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "Hello! Im Munna The Ultra tipe Of khoniker pola 🤖\nPowered by Lawra AI + LangChain with Python!\nAsk me anything!"
+        "Hello! Im Munna The Ultra tipe Of khoniker pola \nPowered by Lawra AI + LangChain with Python!\nAsk me anything!"
     )
 
 # /clear command - resets conversation memory
@@ -38,7 +38,7 @@ async def clear(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.message.from_user.id
     if user_id in user_sessions:
         del user_sessions[user_id]
-    await update.message.reply_text("Memory cleared! Fresh start 🧹")
+    await update.message.reply_text("Memory cleared! Fresh start ")
 
 # AI response handler
 async def ai_reply(update: Update, context: ContextTypes.DEFAULT_TYPE):
